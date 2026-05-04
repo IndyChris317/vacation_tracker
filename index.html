@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vacation Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Vacation Tracker</h1>
+    <p class="subtitle">Accrual: 5.25 hours per 80 hours worked</p>
+
+    <!-- CURRENT PERIOD -->
+
+    <label>
+      Pay Period Date
+      <input type="date" id="payPeriodDate" />
+    </label>
+
+    <label>
+      Current Vacation Balance
+      <input type="number" id="currentBalance" step="0.01" />
+    </label>
+
+    <label>
+      Hours Worked This Pay Period
+      <input type="number" id="hoursWorked" value="80" />
+    </label>
+
+    <div class="row">
+      <label>
+        Full Days Off
+        <input type="number" id="daysOff" value="0" />
+      </label>
+
+      <label>
+        Extra Hours Off
+        <input type="number" id="extraHoursOff" value="0" />
+      </label>
+    </div>
+
+    <button onclick="calculateVacation()">Calculate</button>
+    <button class="undo" onclick="undoLastCalculation()">Undo</button>
+
+    <section class="results">
+      <p>Earned: <strong id="vacationEarned">0.00</strong></p>
+      <p>Used: <strong id="vacationUsed">0.00</strong></p>
+      <p>New Balance: <strong id="newBalance">0.00</strong></p>
+    </section>
+
+    <hr />
+
+    <!-- PROJECTION -->
+
+    <h2>Project Future Balance</h2>
+
+    <label>
+      Average Hours Per Pay Period
+      <input type="number" id="averageHours" value="80" />
+    </label>
+
+    <label>
+      Target Date
+      <input type="date" id="targetDate" />
+    </label>
+
+    <button onclick="projectVacation()">Project</button>
+
+    <section class="results">
+      <p>Pay Periods: <strong id="estimatedPayPeriods">0</strong></p>
+      <p>Earned: <strong id="projectedEarned">0.00</strong></p>
+      <p>Balance: <strong id="projectedBalance">0.00</strong></p>
+    </section>
+
+    <hr />
+
+    <!-- GOAL CALCULATOR -->
+
+    <h2>When Will I Have Enough?</h2>
+
+    <label>
+      Next Pay Period Date
+      <input type="date" id="nextPayPeriodDate" />
+    </label>
+
+    <label>
+      Desired Vacation Hours
+      <input type="number" id="desiredVacationHours" />
+    </label>
+
+    <label>
+      Average Hours Per Pay Period
+      <input type="number" id="goalAverageHours" value="80" />
+    </label>
+
+    <button onclick="calculateGoalDate()">Calculate Goal</button>
+
+    <section class="results">
+      <p>Pay Periods Needed: <strong id="payPeriodsNeeded">0</strong></p>
+      <p>Estimated Date: <strong id="goalDateResult">—</strong></p>
+    </section>
+
+    <hr />
+
+    <!-- HISTORY -->
+
+    <h2>History</h2>
+    <div id="historyList"></div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+/* Base layout */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main container */
+.app {
+  max-width: 520px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+h1, h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Form elements */
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Row layout for side-by-side inputs */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row label {
+  flex: 1;
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #2563eb;
+}
+
+/* Undo button */
+.undo {
+  background: #f2c94c;
+  color: black;
+}
+
+.undo:hover {
+  background: #e0b93f;
+}
+
+/* Sections with results */
+.results {
+  margin-top: 20px;
+  background: #eef5ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Divider */
+hr {
+  margin: 30px 0;
+}
+
+/* History section */
+.history-item {
+  background: #f7f7f7;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Optional: make it nicer on mobile */
+@media (max-width: 500px) {
+  .row {
+    flex-direction: column;
+  }
+}
