@@ -1,2 +1,2 @@
-# vacation-_tracker
+# vacation_tracker
 Vaca Tracker
